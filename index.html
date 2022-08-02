@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Restorant</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+<!--header start-->
+<header class="header">
+    <div class="container">
+        <div class="row justify-conten-between align-items-center">
+            <div class="logo">
+                <a href="#"> <img src="data:image/png;base64,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" alt="">
+
+            </a>
+               </div>
+            <button type="button" class="nav-toggler"></button>
+        </button>
+        <nav class="nav">
+            <ul>
+                <li class="nav-item"><a href="#home">Ev</a></li>
+                <li class="nav-item"><a href="#about">Hakkında</a></li>
+                <li class="nav-item"><a href="#our-menu">Menümüz</a></li>
+                <li class="nav-item"><a href="#testimonials">Görüşler</a></li>
+                <li class="nav-item"><a href="#team">Takım</a></li>
+                <li class="nav-item"><a href="#footer">İletişim</a></li>
+            </ul>
+
+        </nav>
+        </div>
+
+    </div>
+
+</header>
+<!--header end-->
+
+
+
+<!--home section start-->
+<section class="home-section"  id="home">
+    <div class="home-bg"></div>
+    <div class="container">
+        <div class="row min-vh-100 align-items-center">
+            <div class="home-text" >
+                <h1>Restorant</h1>
+                <p> &nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta doloremque, 
+                
+                    </p>
+                    <a href="#our-menu" class="btn btn-default">Menümüz</a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- home section end -->
+
+<!--about section start-->
+<section class="about-section sec-padding" id="about">
+    <div class="container"> 
+        <div class="row">
+            <div class="section-title">
+                <h2 data-title="Bizim hikayemiz" data-aos="fade-up">Hakkında</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="about-text">
+                <h3>Restorantımıza Hoşglediniz</h3>
+                <p>
+                    &nbsp;&nbsp;&nbsp; Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta doloremque, 
+                   reprehenderit quibusdam quae dolorem aspernatur autem necessitatibus laborum nobis incidunt 
+                   totam in tenetur enim minus quos obcaecati sapiente numquam perferendis.
+                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta doloremque, 
+                   reprehenderit quibusdam quae dolorem aspernatur autem necessitatibus laborum nobis incidunt 
+                   totam in tenetur enim minus quos obcaecati sapiente numquam perferendis.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta doloremque, 
+                   reprehenderit quibusdam quae dolorem aspernatur autem necessitatibus laborum nobis incidunt 
+                   totam in tenetur enim minus aspernatur autem necessitatibus laborum nobis incidunt 
+                   totam in tenetur enim minus quos obcaecati sapiente numquam perferendis.
+                   </p>
+                   <a href="#our-menu" class="btn btn-default">menümüzü kontrol et</a>
+               </div>
+           <div class="about-img">
+            <div class="img-box">
+                <h3>20+years</h3>
+                <img class="resim3" src="resim3.jpg" alt="">
+            </div>
+
+           </div>
+        </div>
+    </div>
+</section>
+<!--about section end-->
+
+
+<!-- menu section start -->
+<section class="menu-section sec-padding" id="our-menu">
+    <div class="container">
+        <div class="row">
+            <div class="section-title">
+                <h2 data-title="order now">menü</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-tabs">
+                <button type="button" class="menu-tab-item active" data-target="#lunch">öğle yemeği</button>
+                <button type="button" class="menu-tab-item" data-target="#dinner">akşam yemeği</button>
+                <button type="button" class="menu-tab-item" data-target="#drinks">içecekler</button>
+                <button type="button" class="menu-tab-item" data-target="#desserts">tatlı</button>
+            </div>
+        </div>
+        <div class="row menu-tab-content active" id="lunch">
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim4.jpg" alt="">
+                    <h3>öğle yemeği</h3>
+                </div>
+                <div class="menu-item-price">
+                    120TL
+                </div>
+            </div>
+           
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim5.jpg" alt="">
+                    <h3>akşam yemeği</h3>
+                </div>
+                <div class="menu-item-price">
+                    120TL
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim6.jpg" alt="">
+                    <h3>öğle yemeği</h3>
+                </div>
+                <div class="menu-item-price">
+                    120TL
+                </div>
+            </div>
+           
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim7.jpg" alt="">
+                    <h3>öğle yemeği</h3>
+                </div>
+                <div class="menu-item-price">
+                    120TL
+                </div>
+            </div>
+           
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim9.jpg" alt="">
+                    <h3>öğle yemeği</h3>
+                </div>
+                <div class="menu-item-price">
+                    120TL
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim8.jpg" alt="">
+                    <h3>öğle yemeği</h3>
+                </div>
+                <div class="menu-item-price">
+                    120TL
+                </div>
+            </div>
+            
+        </div>
+        <div class="row menu-tab-content" id="dinner">
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim10.jpg" alt="">
+                    <h3>akşam yemeği</h3>
+                </div>
+                <div class="menu-item-price">
+                    120TL
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim11.jpg" alt="">
+                    <h3>akşam yemeği</h3>
+                </div>
+                <div class="menu-item-price">
+                    120TL
+                </div>
+            </div>
+            
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim12.jpg" alt="">
+                    <h3>akşam yemeği</h3>
+                </div>
+            </div>
+            <div class="menu-item-price">
+                120TL
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim13.jpg" alt="">
+                    <h3>akşam yemeği</h3>
+                </div>
+            </div>
+            <div class="menu-item-price">
+                120TL
+            </div>
+        </div>
+        <div class="row menu-tab-content" id="drinks">
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim10.jpg" alt="">
+                    <h3>içecekler</h3>
+                </div>
+            </div>
+            <div class="menu-item-price">
+                120TL
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim11.jpg" alt="">
+                    <h3>içecekler</h3>
+                </div>
+            </div>
+            <div class="menu-item-price">
+                120TL
+            </div>
+        </div>
+        <div class="row menu-tab-content" id="desserts">
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim10.jpg" alt="">
+                    <h3>tatlı</h3>
+                </div>
+            </div>
+            <div class="menu-item-price">
+                120TL
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-title">
+                    <img src="resim11.jpg" alt="">
+                    <h3>tatlı</h3>
+                </div>
+            </div>
+            <div class="menu-item-price">
+                120TL
+            </div>
+        </div>
+    </div>
+</section>
+<!-- menu section end -->
+
+
+<!-- testimonials section start -->
+<section class="testimonials-section sec-padding" id="testimonials">
+<div class="container">
+    <div class="row">
+        <div class="section-title">
+            <h2 data-title="testimonials">geri dönüş</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="testi-item">
+            <div class="testi-author">
+                <div class="testi-author-name">
+                    <h3>Mehmet şef</h3>
+                    <span>Aşçı</span>
+                </div>
+                <div class="testi-author-img">
+                    <img src="resim14.jpg" alt="">
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum recusandae, vel eos perspiciatis dolores expedita voluptas quisquam quo id vitae ipsum eum, natus suscipit, dolorem sit quam. Facere, delectus soluta.</p>
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+        <div class="testi-item">
+            <div class="testi-author">
+                <div class="testi-author-name">
+                    <h3>Danilo şef</h3>
+                    <span>Aşçı</span>
+                </div>
+                <div class="testi-author-img">
+                    <img src="resim16.jpg" alt="">
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum recusandae, vel eos perspiciatis dolores expedita voluptas quisquam quo id vitae ipsum eum, natus suscipit, dolorem sit quam. Facere, delectus soluta.</p>
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+        <div class="testi-item">
+            <div class="testi-author">
+                <div class="testi-author-name">
+                    <h3>Somer şef</h3>
+                    <span>Aşçı</span>
+                </div>
+                <div class="testi-author-img">
+                    <img src="resim15.jpg" alt="">
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum recusandae, vel eos perspiciatis dolores expedita voluptas quisquam quo id vitae ipsum eum, natus suscipit, dolorem sit quam. Facere, delectus soluta.</p>
+            <div class="ratings">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- testimonials section end -->
+
+<!-- team section start -->
+<section class="team-section sec-padding" id="team">
+    <div class="container">
+        <div class="row">
+            <div class="section-title">
+                <h2 data-title="team">şef</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="team-item">
+                <img src="resim14.jpg" alt="">
+                <div class="team-item-info">
+                    <h3>mehmet şef</h3>
+                </div>
+            </div>
+            <div class="team-item">
+                <img src="1resim.jpg" alt="">
+                <div class="team-item-info">
+                    <h3>Danilo şef</h3>
+                </div>
+            </div>
+            <div class="team-item">
+                <img src="resim15.jpg" alt="">
+                <div class="team-item-info">
+                    <h3>somer şef</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- team section end -->
+
+
+<!-- footer start-->
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-item">
+                <h3>Konumumuz</h3>
+                <p>Xyz Caddesi,Sector-12,<br>Yeni Mahelle - 000 ***</p>
+            </div>
+            <div class="footer-item">
+                <h3>Açılış saatleri</h3>
+                <p>Pazartesiden Pazara <br>9.00 - 22.00</p>
+            </div>
+            <div class="footer-item">
+                <h3>Bize Ulaşın</h3>
+                <p>0545 765 4***</p>
+                <p>info@gamil.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="copyright">
+                &copy;2022 - Şevin YAKUT tarafından tasarlandı
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer end-->
+
+<script>
+    AOS.init();
+  </script>
+ <script src="script.js"></script>
+ 
+</body>
+</html>
