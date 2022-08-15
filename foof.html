@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="style5.css">
+    <link rel="icon" href="{{asset('images/')}}/icon_1.png" type="image/x-icon" />
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.4.0/css/lightgallery.min.css">
+    <link rel="icon" href="{{asset('images/')}}/icon_1.png" type="image/x-icon" />
+   <title>Food</title>
+</head>
+<body>
+    
+<!-- header section starts -->
+<section class="header">
+
+    <a href="#" class="logo"><i class="fas fa-utensils"></i> food.</a>
+    <nav class="navbar">
+        <a href="#home">ev</a>
+        <a href="#about">Hakkında</a>
+        <a href="#food">Gıda</a>
+        <a href="#gallery">galeri</a>
+        <a href="#order">order</a>
+        <a href="#blogs">bloglar</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+</section>
+
+
+
+<!-- header section end -->
+
+
+
+<!-- home section start -->
+
+<section class="home" id="home">
+    <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide" style="background:url(slide1.jpg) no-repeat ;">
+                <div class="content">
+                    <span>olağanüstü yemek</span>
+                    <h3>lezzetli yemek</h3>
+                    <a href="#" class="btn">Başla</a>
+                </div>
+            </div>
+            <div class="swiper-slide slide" style="background:url(slide2.jpg) no-repeat ;">
+                <div class="content">
+                    <span>olağanüstü yemek</span>
+                    <h3>lezzetli yemek</h3>
+                    <a href="#" class="btn">Başla</a>
+                </div>
+            </div>
+            <div class="swiper-slide slide" style="background:url(slide3.jpg) no-repeat ;">
+                <div class="content">
+                    <span>olağanüstü yemek</span>
+                    <h3>lezzetli yemek</h3>
+                    <a href="#" class="btn">Başla</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+</section>
+
+
+<!-- home section end -->
+
+<!--about setion start-->
+<section class="about" id="about">
+    <div class="img">
+        <img src="slide.jpg" alt="">
+    </div>
+    <div class="content">
+        <h3 class="title">hoşgeldiniz</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat accusamus debitis autem repudiandae id neque in incidunt laboriosam libero dolores laudantium, laborum, minus aut dolorum maiores possimus? Repellat, eaque velit?</p>
+        <a href="#" class="btn">devamını oku</a>
+        <div class="icons-container">
+            <div class="icons">
+                <img src="food1.png" alt="">
+                <h3>kaliteli yemek</h3>
+            </div>
+            <div class="icons">
+                <img src="food3.png" alt="">
+                <h3> yemek ve içecek</h3>
+            </div>
+            <div class="icons">
+                <img src="food4.png" alt="">
+                <h3>uzman şef</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--about setion end-->
+
+
+<!-- food section start -->
+<section class="food" id="food">
+    <div class="heading">
+        <span>popüler yemekler</span>
+        <h3>lezzetli yemeklerimiz</h3>
+    </div>
+    <div class=" swiper food-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide" data-name="food-1">
+                <img src="yemek1.jpg" alt="">
+                <h3>lezzetli yemekler</h3>
+                <div class="price">49.99₺</div>
+            </div>
+            <div class="swiper-slide slide" data-name="food-2">
+                <img src="yemek2.jpg" alt="">
+                <h3>lezzetli yemekler</h3>
+                <div class="price">49.99₺</div>
+            </div>
+            <div class="swiper-slide slide" data-name="food-3">
+                <img src="yemek3.jpg" alt="">
+                <h3>lezzetli yemekler</h3>
+                <div class="price">49.99₺</div>
+            </div>
+            <div class="swiper-slide slide" data-name="food-4">
+                <img src="yemek4.jpg" alt="">
+                <h3>lezzetli yemekler</h3>
+                <div class="price">49.99₺</div>
+            </div>
+            <div class="swiper-slide slide" data-name="food-5">
+                <img src="yemek5.jpg" alt="">
+                <h3>lezzetli yemekler</h3>
+                <div class="price">49.99₺</div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<!-- food section end -->
+<!-- gallery section starts-->
+
+<section class="gallery" id="gallery">
+    <div class="heading">
+        <span>bizim galerimiz</span>
+        <h3>anlatılmamış hikayelerimiz</h3>
+    </div>
+    <div class="gallery-container">
+        <a href="yemek1.jpg" class="box">
+            <img src="yemek1.jpg" alt="">
+            <div class="icon"> <i class="fas fa-plus"></i></div>
+        </a>
+        <a href="yemek2.jpg" class="box">
+            <img src="yemek2.jpg" alt="">
+            <div class="icon"> <i class="fas fa-plus"></i></div>
+        </a>
+        <a href="yemek3.jpg" class="box">
+            <img src="yemek3.jpg" alt="">
+            <div class="icon"> <i class="fas fa-plus"></i></div>
+        </a>
+        <a href="yemek4.jpg" class="box">
+            <img src="yemek4.jpg" alt="">
+            <div class="icon"> <i class="fas fa-plus"></i></div>
+        </a>
+        <a href="yemek5.jpg" class="box">
+            <img src="yemek5.jpg" alt="">
+            <div class="icon"> <i class="fas fa-plus"></i></div>
+        </a>
+        <a href="yemek6.jpg" class="box">
+            <img src="yemek6.jpg" alt="">
+            <div class="icon"> <i class="fas fa-plus"></i></div>
+        </a>
+    </div>
+</section>
+<!-- gallery section end-->
+
+<!--order section starts-->
+<section class="order" id="order">
+    <div class="heading">
+        <span>order now</span>
+        <h3>fast home delivery</h3>
+    </div>
+    <form action="">
+        <div class="box-container">
+            <div class="box">
+                <div class="inputBox">
+                    <span>Ad Soyad</span>
+                    <input type="text" placeholder="adınızı giriniz">
+                </div>
+                <div class="inputBox">
+                    <span>yemek adı</span>
+                    <input type="text" placeholder="istediğin yemek">
+                </div>
+                <div class="inputBox">
+                    <span>sipariş detayları</span>
+                    <input type="text" placeholder="sipariş detayları">
+                </div>
+                <div class="inputBox">
+                    <span>adres</span>
+                    <textarea name="" placeholder="adresi girin" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inputBox">
+                    <span>numara</span>
+                    <input type="text" placeholder="numara giriniz">
+                </div>
+                <div class="inputBox">
+                    <span>ne kadar</span>
+                    <input type="number" placeholder="kaç tane istiyorsun">
+                </div>
+                <div class="inputBox">
+                    <span>ne zaman isterseniz</span>
+                    <input type="datetime-local">
+                </div>
+                <div class="inputBox">
+                    <span>adres</span>
+                    
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.1644192787853!2d40.149618715321985!3d37.926589179732055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40751f6c08d82e27%3A0xb3cfd09e05d3ad44!2sLOQUM%20ET-STEAKHOUSE%20D%C4%B0YARBAKIR!5e0!3m2!1str!2str!4v1660561490042!5m2!1str!2str" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="order now" class="btn">
+    </form>
+
+
+
+
+</section>
+<!--order section end-->
+
+
+<!--blogs section start-->
+<section class="blogs" id="blogs">
+    <div class="heading">
+        <span>our blogs</span>
+        <h3>en son gönderilerimiz</h3>
+    </div>
+
+    <div class="swiper blogs-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="kek.jpg" alt="">
+                    <span>burger</span>
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-calendar"></i>13 ağustos 2022</a>
+                        <a href="#"><i class="fas fa-user"></i>13 ağustos 2022</a>
+                    </div>
+                    <a href="#" class="title">blog başlığı buraya </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, laborum.</p>
+                    <a href="#" class="btn">devamını oku</a>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="yemek5.jpg" alt="">
+                    <span>burger</span>
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-calendar"></i>13 ağustos 2022</a>
+                        <a href="#"><i class="fas fa-user"></i>13 ağustos 2022</a>
+                    </div>
+                    <a href="#" class="title">blog başlığı buraya </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, laborum.</p>
+                    <a href="#" class="btn">devamını oku</a>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="yemek4.jpg" alt="">
+                    <span>burger</span>
+                </div>
+                <div class="content">
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-calendar"></i>13 ağustos 2022</a>
+                        <a href="#"><i class="fas fa-user"></i>13 ağustos 2022</a>
+                    </div>
+                    <a href="#" class="title">blog başlığı buraya </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, laborum.</p>
+                    <a href="#" class="btn">devamını oku</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+
+
+
+<!--blogs section end-->
+
+<!-- blogs section start -->
+
+
+<section class="footer">
+
+    <div class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-clock"></i>
+            <h3>açılış saati</h3>
+            <p>07.00 - 22.00</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>telefon numarası</h3>
+            <p>0545 777 76 67</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>email</h3>
+            <p>food@gmail.com</p>
+        </div>
+        <div class="icons">
+            <i class="fas fa-map"></i>
+            <h3>adres</h3>
+            <p>xyz caddesi - abc sokak</p>
+        </div>
+
+
+    </div>
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-youtube"></a>
+        
+    </div>
+
+
+</section>
+
+
+
+
+
+
+<!-- blogs section end -->
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.4.0/js/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script2.js"></script>
+
+    <script>
+        lightGallery(document.querySelector('.gallery .gallery-container'));
+    </script>
+
+</body>
+</html>
